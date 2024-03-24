@@ -27,7 +27,7 @@ def show_anns(anns):
 class Predictor(BasePredictor):
     def setup(self):
         """Load the model into memory to make running multiple predictions efficient"""
-        #sam_checkpoint = "sam_vit_h_4b8939.pth"
+        sam_checkpoint = "sam_vit_h_4b8939.pth"
         device = "cuda"
         model_type = "default"
         self.sam = sam_model_registry[model_type](checkpoint=sam_checkpoint)
